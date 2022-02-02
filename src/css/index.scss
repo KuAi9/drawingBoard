@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#tool {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 8px;
+    canvas {
+        border: 3px pink solid;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+#cvs {
+    flex: 1;
+    max-height: 90vh;
+    border: 5px solid skyblue;
+    box-sizing: border-box;
+}
+
+#size-box {
+    position: relative;
+    div {
+        display: none;
+        position: absolute;
+        width: 100%;
+        section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 50px;
+            margin-bottom: 10px;
+            padding: 0 20px;
+            background-color: rgb(252, 250, 226);
+            cursor: pointer;
+        }
+        section:hover {
+            border: 3px #ffd902 solid !important;
+            box-shadow: 0px 0px 10px #ffd902;
+        }
+        section > hr {
+            flex: 1;
+            background-color: #000;
+        }
+        section:nth-child(1) > hr {
+            height: 5px;
+        }
+        section:nth-child(2) > hr {
+            height: 10px;
+        }
+        section:nth-child(3) > hr {
+            height: 15px;
+        }
+    }
+    .tool-active + div {
+        display: block;
+    }
+}
+#color-box {
+    position: relative;
+    div {
+        display: none;
+        position: absolute;
+        width: 100%;
+        section {
+            height: 50px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        section:hover {
+            border: 3px #ffd902 solid !important;
+            box-shadow: 0px 0px 10px #ffd902;
+        }
+        section:nth-child(1) {
+            background-color: pink;
+        }
+        section:nth-child(2) {
+            background-color: skyblue;
+        }
+        section:nth-child(3) {
+            background-color: #f56c6c;
+        }
+        section:nth-child(4) {
+            background-color: #ffd902;
+        }
+        section:nth-child(5) {
+            background-color: yellowgreen;
+        }
+        section:nth-child(6) {
+            background-color: #968ccf;
+        }
+        section:nth-child(7) {
+            background-color: black;
+        }
+    }
+    .tool-active + div {
+        display: block;
+    }
+}
+.tool-active {
+    border: 3px #ffd902 solid !important;
+    box-shadow: 0px 0px 20px #ffd902;
+}

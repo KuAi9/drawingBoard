@@ -1,0 +1,77 @@
+<!--
+ * @Explain: xxx
+ * @Author: SuperLy
+ * @LastEditors: SuperLy
+ * @Date: 2022-01-31 19:35:26
+ * @LastEditTime: 2022-02-02 20:20:10
+ * @FilePath: \简易画板\src\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas 画板</title>
+</head>
+
+<body>
+    <div id="tool">
+        <canvas id="cvs-pen" class="tool-active" width="120" height="50">
+            画笔
+        </canvas>
+        <div id="size-box">
+            <canvas id="cvs-size" width="120" height="50">
+                线条粗细
+            </canvas>
+            <div>
+                <section>
+                    <hr>
+                </section>
+                <section>
+                    <hr>
+                </section>
+                <section>
+                    <hr>
+                </section>
+            </div>
+        </div>
+        <div id="color-box">
+            <canvas id="cvs-color" width="120" height="50">
+                颜色
+            </canvas>
+            <div>
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+            </div>
+        </div>
+        <canvas id="cvs-rubber" width="120" height="50">
+            橡皮
+        </canvas>
+        <canvas id="cvs-rect" width="120" height="50">
+            矩形
+        </canvas>
+        <canvas id="cvs-arc" width="120" height="50">
+            圆形
+        </canvas>
+        <canvas id="cvs-clear" width="120" height="50">
+            清空
+        </canvas>
+        <a id="save" href="#">
+            <canvas id="cvs-download" width="120" height="50">
+                下载图片
+            </canvas>
+        </a>
+    </div>
+    <canvas id="cvs">
+        您的浏览器不支持 canvas
+    </canvas>
+</body>
+
+</html>
